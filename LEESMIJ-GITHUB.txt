@@ -1,0 +1,11 @@
+# Wittenoord Veldbeheer - GitHub Pages
+
+Upload alle bestanden uit deze map naar de hoofdmap van een GitHub-repository.
+
+GitHub: Settings > Pages > Build and deployment > Deploy from a branch > main > /(root) > Save.
+
+Het adres wordt https://GEBRUIKERSNAAM.github.io/REPOSITORYNAAM/
+
+Open in Safari op iPhone > Deel > Zet op beginscherm.
+
+Let op: GitHub Pages is openbaar. De huidige app bewaart gegevens lokaal op het apparaat; geen gedeelde live-registratie. Bij overstap van Netlify worden oude lokale gegevens niet automatisch overgezet.
