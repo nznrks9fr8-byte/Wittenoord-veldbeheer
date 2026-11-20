@@ -1,11 +1,9 @@
-# Wittenoord Veldbeheer - GitHub Pages
+Wittenoord Veldbeheer 1.2 - gezamenlijke hoogzitten
 
-Upload alle bestanden uit deze map naar de hoofdmap van een GitHub-repository.
+Upload ALLE bestanden uit deze map naar de ROOT van je bestaande GitHub repository.
+Vervang index.html, sw.js en overige bestanden.
+Geen nieuwe repository aanmaken.
 
-GitHub: Settings > Pages > Build and deployment > Deploy from a branch > main > /(root) > Save.
-
-Het adres wordt https://GEBRUIKERSNAAM.github.io/REPOSITORYNAAM/
-
-Open in Safari op iPhone > Deel > Zet op beginscherm.
-
-Let op: GitHub Pages is openbaar. De huidige app bewaart gegevens lokaal op het apparaat; geen gedeelde live-registratie. Bij overstap van Netlify worden oude lokale gegevens niet automatisch overgezet.
+Hoogzitten worden na inloggen geladen en in Supabase opgeslagen.
+Veldbezoeken, hoogzitbezetting, waarnemingen en foto’s blijven in deze versie LOKAAL.
+Gebruik de app nog niet als gedeeld veiligheidssysteem.
