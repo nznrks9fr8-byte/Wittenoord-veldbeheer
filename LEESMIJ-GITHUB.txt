@@ -1,3 +1,5 @@
 Wittenoord Veldbeheer 1.3. Upload alle losse bestanden naar de hoofdmap van GitHub.
 Gedeelde aan- en afmeldingen vereisen Supabase GRANTs en RLS-policies.
 Dit is geen veiligheidssysteem: geen betrouwbare live GPS of automatische uitcheck.
+
+Versie 1.3.4: verbeterd inlogscherm voor Apple Wachtwoorden / Face ID-autofill; toon wachtwoord. Geen eigen Face ID-authenticatie.
