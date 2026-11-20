@@ -1,9 +1,3 @@
-Wittenoord Veldbeheer 1.2 - gezamenlijke hoogzitten
-
-Upload ALLE bestanden uit deze map naar de ROOT van je bestaande GitHub repository.
-Vervang index.html, sw.js en overige bestanden.
-Geen nieuwe repository aanmaken.
-
-Hoogzitten worden na inloggen geladen en in Supabase opgeslagen.
-Veldbezoeken, hoogzitbezetting, waarnemingen en foto’s blijven in deze versie LOKAAL.
-Gebruik de app nog niet als gedeeld veiligheidssysteem.
+Wittenoord Veldbeheer 1.3. Upload alle losse bestanden naar de hoofdmap van GitHub.
+Gedeelde aan- en afmeldingen vereisen Supabase GRANTs en RLS-policies.
+Dit is geen veiligheidssysteem: geen betrouwbare live GPS of automatische uitcheck.
