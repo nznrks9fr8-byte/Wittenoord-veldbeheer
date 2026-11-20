@@ -1,0 +1,27 @@
+-- Uitvoeren in Supabase > SQL Editor voordat versie 1.3.5 live gaat.
+-- Locaties zijn uitsluitend leesbaar voor geregistreerde jagers met een actieve veldaanmelding.
+create table if not exists public.jager_locaties (
+ gebruiker_id uuid primary key references auth.users(id) on delete cascade,
+ latitude double precision not null check(latitude between -90 and 90),
+ longitude double precision not null check(longitude between -180 and 180),
+ nauwkeurigheid double precision check(nauwkeurigheid >= 0),
+ bijgewerkt_op timestamptz not null default now()
+);
+alter table public.jager_locaties enable row level security;
+grant select, insert, update, delete on public.jager_locaties to authenticated;
+drop policy if exists "jagers lezen actuele gps" on public.jager_locaties;
+create policy "jagers lezen actuele gps" on public.jager_locaties for select to authenticated
+using (public.is_wittenoord_jager() and (gebruiker_id=auth.uid() or (bijgewerkt_op > now()-interval '2 minutes'
+ and exists (select 1 from public.veldbezoeken v where v.gebruiker_id=jager_locaties.gebruiker_id and v.afgemeld_op is null))));
+drop policy if exists "jager plaatst eigen gps" on public.jager_locaties;
+create policy "jager plaatst eigen gps" on public.jager_locaties for insert to authenticated
+with check (gebruiker_id=auth.uid() and public.is_wittenoord_jager()
+ and exists (select 1 from public.veldbezoeken v where v.gebruiker_id=auth.uid() and v.afgemeld_op is null));
+drop policy if exists "jager wijzigt eigen gps" on public.jager_locaties;
+create policy "jager wijzigt eigen gps" on public.jager_locaties for update to authenticated
+using (gebruiker_id=auth.uid())
+with check (gebruiker_id=auth.uid() and public.is_wittenoord_jager()
+ and exists (select 1 from public.veldbezoeken v where v.gebruiker_id=auth.uid() and v.afgemeld_op is null));
+drop policy if exists "jager verwijdert eigen gps" on public.jager_locaties;
+create policy "jager verwijdert eigen gps" on public.jager_locaties for delete to authenticated
+using (gebruiker_id=auth.uid());
