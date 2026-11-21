@@ -1,9 +1,5 @@
-Wittenoord Veldbeheer 1.3.5.6
+Wittenoord Veldbeheer 1.3.5.8
 
-Upload de inhoud van deze ZIP (niet de ZIP zelf) naar de hoofdmap van de bestaande GitHub-repository.
-
-Wijzigingen: robuuster synchroniseren bij opstarten, automatische herpogingen, aanmeldknop wacht op database, verbeterde update-cache.
-
-Bestaande lokale waarnemingen worden niet gewijzigd. Verwijder de iPhone-app niet.
-
-De Supabase SQL van versie 1.3.5 hoeft NIET opnieuw uitgevoerd te worden.
+Hersteld: ontbrekende sharedPresence en updateVisitButton bij opstarten.
+Upload alle uitgepakte bestanden naar de hoofdmap van de bestaande GitHub-repository.
+Verwijder de iPhone-app niet en wis geen websitegegevens; waarnemingen en foto's staan lokaal.
