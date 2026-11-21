@@ -1,5 +1,9 @@
-Wittenoord Veldbeheer 1.3. Upload alle losse bestanden naar de hoofdmap van GitHub.
-Gedeelde aan- en afmeldingen vereisen Supabase GRANTs en RLS-policies.
-Dit is geen veiligheidssysteem: geen betrouwbare live GPS of automatische uitcheck.
+Wittenoord Veldbeheer 1.3.5.6
 
-Versie 1.3.4: verbeterd inlogscherm voor Apple Wachtwoorden / Face ID-autofill; toon wachtwoord. Geen eigen Face ID-authenticatie.
+Upload de inhoud van deze ZIP (niet de ZIP zelf) naar de hoofdmap van de bestaande GitHub-repository.
+
+Wijzigingen: robuuster synchroniseren bij opstarten, automatische herpogingen, aanmeldknop wacht op database, verbeterde update-cache.
+
+Bestaande lokale waarnemingen worden niet gewijzigd. Verwijder de iPhone-app niet.
+
+De Supabase SQL van versie 1.3.5 hoeft NIET opnieuw uitgevoerd te worden.
